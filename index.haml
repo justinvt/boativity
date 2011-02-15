@@ -9,11 +9,11 @@
         line-height: 1.8em
         letter-spacing: -0.015em
         background: #f4f4f4
-      .menu
+      ul
         -moz-padding-start: 0
         margin: 0
         padding: 0
-      .menu li
+      li
         display: inline
         list-style-type: none
         margin: 0 10px 0 0
@@ -30,10 +30,16 @@
         margin: 20px 0 0 0
         background: #3cf
         height: 400px
-        background: #bbb
+        background: #036
       .selections
-        background: #0033ff
+        background: #eee
         height: 60px
+        border: solid 1px #ccc
+        li
+          color: #666
+          padding: 10px
+          background: #ddd
+          border: solid 1px #ccc
      
 
 %body
@@ -45,4 +51,8 @@
         %li Contact
     .info
     .selections
+      %ul.menu
+        %li About
+        %li FAQ
+        %li Contact
     .footer
