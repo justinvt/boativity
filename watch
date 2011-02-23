@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'fssm'
+
+dir=File.dirname(__FILE__)
+
+FSSM.monitor(dir, '**/*') do
+  update {|base, relative|
+    puts "updated #{base} - #{relative}"
+    `haml index.haml > index.html` if relative =~ /haml$/
+  }
+  delete {|base, relative|
+    puts "deleted"
+  }
+  create {|base, relative|
+    puts "created"
+  }
+end
+

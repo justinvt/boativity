@@ -8,30 +8,38 @@
       letter-spacing: -0.015em;
       background: #f4f4f4; }
     
+    .container {
+      margin: auto;
+      width: 960px; }
+    
     ul {
       -moz-padding-start: 0;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      float: left; }
+    
+    .logo {
+      font-size: 1.5em;
+      margin: 0 0 0 20px; }
     
     li {
       float: left;
       list-style-type: none;
-      margin: 0 10px 0 0;
+      margin: 0 40px 0 0;
       padding: 0;
-      color: #666666; }
+      color: #888888; }
     
-    .container {
-      margin: auto;
-      width: 800px; }
+    .block {
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      width: 100%;
+      float: left;
+      padding: 10px 0; }
     
     .header, .footer {
-      height: 30px;
       border: solid 1px #eeeeee;
       margin: 20px 0 0 0;
-      border-radius: 10px;
-      -moz-border-radius: 10px;
-      background: white;
-      padding: 10px 20px; }
+      background: white; }
     
     .info {
       margin: 20px 0 0 0;
@@ -41,37 +49,40 @@
     
     .selections {
       background: #e6e6e6;
-      height: 80px;
-      border: solid 1px #f3f3f3; }
-      .selections ul {
-        margin: 20px 0 0 0; }
+      border: solid 1px #dddddd; }
       .selections li {
-        width: 100px;
+        width: 150px;
         text-align: center;
         color: #666666;
-        padding: 5px;
-        background: #eeeeee;
-        margin: 0 0 10px 20px;
-        border: solid 1px #eeeeee; }
+        padding: 10px;
+        background: white;
+        margin: 0 0 0 20px;
+        border: solid 1px #dddddd;
+        border-radius: 5px;
+        -moz-border-radius: 5px; }
   </style>
+  <script src='app.js' type='text/javascript'></script>
 </head>
 <body>
   <div class='container'>
-    <div class='header'>
+    <div class='header block'>
+      <ul class='menu'>
+        <li>
+          <div class='logo'>Boatvity</div>
+        </li>
+        <li>About</li>
+        <li>FAQ</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class='info block'></div>
+    <div class='selections block'>
       <ul class='menu'>
         <li>About</li>
         <li>FAQ</li>
         <li>Contact</li>
       </ul>
     </div>
-    <div class='info'></div>
-    <div class='selections'>
-      <ul class='menu'>
-        <li>About</li>
-        <li>FAQ</li>
-        <li>Contact</li>
-      </ul>
-    </div>
-    <div class='footer'></div>
+    <div class='footer block'></div>
   </div>
 </body>

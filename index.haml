@@ -9,27 +9,33 @@
         line-height: 1.8em
         letter-spacing: -0.015em
         background: #f4f4f4
+      .container
+        margin: auto
+        width: 960px
       ul
         -moz-padding-start: 0
         margin: 0
         padding: 0
+        float: left
+      .logo
+        font-size: 1.5em
+        margin: 0 0 0 20px
       li
         float: left
         list-style-type: none
-        margin: 0 10px 0 0
+        margin: 0 40px 0 0
         padding: 0
-        color: #666
-      .container
-        margin: auto
-        width: 800px
+        color: #888
+      .block
+        border-radius: 5px
+        -moz-border-radius: 5px
+        width: 100%
+        float: left
+        padding: 10px 0
       .header, .footer
-        height: 30px
         border: solid 1px #eee
         margin: 20px 0 0 0
-        border-radius: 10px
-        -moz-border-radius: 10px
         background: #fff
-        padding: 10px 20px
       .info
         margin: 20px 0 0 0
         background: #3cf
@@ -37,31 +43,34 @@
         background: #036
       .selections
         background: #e6e6e6
-        height: 80px
-        border: solid 1px #f3f3f3
-        ul
-          margin: 20px 0 0 0
+        border: solid 1px #ddd
         li
-          width: 100px
+          width: 150px
           text-align: center
           color: #666
-          padding: 5px
-          background: #eee
-          margin: 0 0 10px 20px
-          border: solid 1px #eee
+          padding: 10px
+          background: #fff
+          margin: 0 0 0 20px
+          border: solid 1px #ddd
+          border-radius: 5px
+          -moz-border-radius: 5px
+
+  %script{ :type => "text/javascript", :src => "app.js" }
      
 
 %body
   .container
-    .header
+    .header.block
+      %ul.menu
+        %li
+          .logo Boatvity
+        %li About
+        %li FAQ
+        %li Contact
+    .info.block
+    .selections.block
       %ul.menu
         %li About
         %li FAQ
         %li Contact
-    .info
-    .selections
-      %ul.menu
-        %li About
-        %li FAQ
-        %li Contact
-    .footer
+    .footer.block
