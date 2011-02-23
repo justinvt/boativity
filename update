@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
+
+puts "Compiling haml"
 haml index.haml > index.html
+
+puts "Committing changes to git"
 git add .
 git commit . -m "update"
+
+puts "Pushing to remote origin"
 git push origin gh-pages
