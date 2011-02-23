@@ -1,12 +1,12 @@
 #!/usr/bin/env bash -i
 
 
-puts "Compiling haml"
-/opt/local/bin/haml index.haml > index.html
+echo "Compiling haml"
+haml index.haml > index.html
 
-puts "Committing changes to git"
-/opt/local/bin/git add .
-/opt/local/bin/git commit . -m "update"
+echo "Committing changes to git"
+git add .
+git commit . -m "update"
 
-puts "Pushing to remote origin"
-/opt/local/bin/git push origin gh-pages
+echo "Pushing to remote origin"
+git push origin gh-pages
